@@ -1,10 +1,25 @@
 {
-  "presets": [
-    ["latest", {
-      "es2015": {
-        "modules": false
-      }
-    }]
-  ],
-  "plugins": ["external-helpers"]
+  "env": {
+    "dev": {
+      "presets": [
+        ["latest", {
+          "es2015": {
+            "modules": false
+          }
+        }]
+      ],
+      "plugins": ["external-helpers"]
+    },
+    "test": {
+      "presets": ["latest"],
+      "plugins": [
+        ["module-resolver", {
+          "alias": {
+            "lodash-es": "lodash"
+          }
+        }],
+        "rewire"
+      ]
+    }
+  }
 }
