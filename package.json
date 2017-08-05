@@ -2,7 +2,7 @@
   "name": "graphql-mocks",
   "version": "0.1.0",
   "description": "Create mock data from GraphQL queries",
-  "main": "index.js",
+  "main": "./src/index.js",
   "author": "Matt Petrie <matthew.petrie@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -12,12 +12,10 @@
   },
   "devDependencies": {
     "eslint": "^4.4.0",
-    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^11.3.1",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.1.2",
-    "eslint-plugin-react": "^7.1.0",
     "prettier": "^1.5.3"
   }
 }

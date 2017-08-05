@@ -3,7 +3,7 @@
     "node": true,
   },
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "prettier",
   ],
   "plugins": [
@@ -11,6 +11,7 @@
   ],
   "rules": {
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-underscore-dangle": "off",
     "prettier/prettier": ["error", {"singleQuote": true, "semi": false, "trailingComma": "es5"}],
   }
 }
