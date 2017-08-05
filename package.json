@@ -1,0 +1,8 @@
+{
+  "name": "graphql-mocks",
+  "version": "0.1.0",
+  "description": "Create mock data from GraphQL queries",
+  "main": "index.js",
+  "author": "Matt Petrie <matthew.petrie@gmail.com>",
+  "license": "MIT"
+}
