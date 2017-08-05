@@ -2,20 +2,31 @@
   "name": "graphql-mocks",
   "version": "0.1.0",
   "description": "Create mock data from GraphQL queries",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "author": "Matt Petrie <matthew.petrie@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "dependencies": {
     "faker": "^4.1.0",
-    "graphql-anywhere": "^3.1.0",
-    "lodash": "^4.17.4"
+    "graphql-anywhere": "^3.1.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.25.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
     "eslint": "^4.4.0",
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-prettier": "^2.1.2",
-    "prettier": "^1.5.3"
+    "lodash-es": "^4.17.4",
+    "prettier": "^1.5.3",
+    "rollup": "^0.45.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0"
   }
 }

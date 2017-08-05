@@ -1,5 +1,5 @@
 import graphql from 'graphql-anywhere'
-import { get } from 'lodash'
+import { get } from 'lodash-es'
 
 import resolver from './resolver'
 
