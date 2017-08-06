@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "BABEL_ENV='dev' yarn test && rollup -c",
-    "test": "BABEL_ENV='test' ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "BABEL_ENV='test' nyc ava",
+    "test:ci": "BABEL_ENV='test' nyc ava",
     "test:watch": "BABEL_ENV='test' ava --watch"
   },
   "dependencies": {
@@ -24,12 +26,16 @@
     "babel-plugin-rewire": "^1.1.0",
     "babel-preset-latest": "^6.24.1",
     "babel-register": "^6.24.1",
+    "coveralls": "^2.13.1",
     "eslint": "^4.4.0",
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-prettier": "^2.1.2",
+    "graphql": "^0.10.5",
+    "graphql-tag": "^2.4.2",
     "lodash": "^4.17.4",
+    "nyc": "^11.1.0",
     "prettier": "^1.5.3",
     "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",

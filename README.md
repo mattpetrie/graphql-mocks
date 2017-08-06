@@ -1,4 +1,5 @@
 # graphql-mocks
+[![Build Status](https://travis-ci.org/mattpetrie/graphql-mocks.svg?branch=master)](https://travis-ci.org/mattpetrie/graphql-mocks) [![Coverage Status](https://coveralls.io/repos/github/mattpetrie/graphql-mocks/badge.svg)](https://coveralls.io/github/mattpetrie/graphql-mocks)
 
 > Effortlessly create random mock data from your graphql queries - no schema required!
 
