@@ -1,12 +1,10 @@
-import faker from 'faker'
+import faker from './flatFaker'
 
-const fakes = {
-  id: faker.random.number,
-  email: faker.internet.email,
-  firstName: faker.name.firstName,
-  lastName: faker.name.lastName,
-  int: faker.random.number,
-  string: faker.hacker.phrase,
-}
+// Here we define custom types that are not included in Faker
+const fakes = Object.assign({}, faker, {
+  id: faker.number,
+  int: faker.number,
+  string: faker.phrase,
+})
 
 export default fakes

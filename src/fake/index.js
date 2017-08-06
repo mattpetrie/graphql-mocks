@@ -1,24 +1,7 @@
 import { isEmail, isId, isName } from '../matchers'
+import handleId from './handlers/handleId'
+import handleName from './handlers/handleName'
 import fakes from './fakes'
-
-const handleId = (field, rootValue = {}, entityMap) => {
-  if (field === 'id') return fakes.id()
-  const currentEntity = entityMap[rootValue.__typeName] || {}
-  const entityFromId = field.match(/.*(?=id)/i)[0]
-  if (
-    currentEntity.parent &&
-    currentEntity.parent.__typeName === entityFromId
-  ) {
-    return currentEntity.parent.id
-  }
-  return fakes.id()
-}
-
-const handleName = name => {
-  if (name.match(/first/i)) return fakes.firstName()
-  if (name.match(/last/i)) return fakes.lastName()
-  return `${fakes.firstName()} ${fakes.lastName()}`
-}
 
 const fake = (type, rootValue, entityMap) => {
   if (isId(type)) return handleId(type, rootValue, entityMap)
